@@ -1,0 +1,158 @@
+/*默认样式*/
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+input, button{
+    outline: none;
+}
+/*主要内容*/
+#logincontent{
+    width: 336px;
+    background: #ffffff;
+}
+
+#logincontent .content-header a{
+    width: 50%;
+    height: 46px;
+    background-color: #f5f5f5;
+    display: inline-block;
+    float: left;
+    font-size:16px;
+    text-align: center;
+    line-height: 46px;
+    color: #262626;
+	
+}
+
+#logincontent .content-header a.current{
+    background-color: transparent;
+    color: rgba(31,70,154,1);
+}
+
+/*内容*/
+#logincontent .content-body{
+    /*background-color: red;*/
+    padding:12px 24px 1px 24px;
+}
+
+#logincontent .content-body .dom{
+    width: 100%;
+    display: none;
+}
+
+#logincontent .content-body .dom .s1{
+    /*background-color: red;*/
+    margin-bottom: 6px;
+	height:40px;
+}
+#logincontent .content-body .dom .s3{
+    /*background-color: red;*/
+    margin-bottom: 6px;
+	height:20px;
+}
+#logincontent .content-body .dom .s3 .forgetpassword{
+    color: #666666;
+    margin-bottom: 2rem;
+	font-size:14px;
+	text-align:right;
+}
+#logincontent .content-body .dom .s1 h4{
+    color: #666666;
+}
+.usertype{
+	margin-left:10px;
+}
+#logincontent .content-body .dom .s1 input{
+    width: 100%;
+    height: 30px;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+}
+
+#logincontent .content-body .dom .s2{
+    /*background-color: red;*/
+    margin-bottom: 8px;
+	font-size:14px;
+	color:#999999;
+}
+
+#logincontent .content-body .dom .btn{
+    width: 100%;
+    height:42px;
+	line-height:42px;
+    border: none;
+    font-size:18px;
+    color: #fff;
+    background-color: rgba(240,149,17,1);
+	border:1px solid #rgba(210,124,0,1);
+    border-radius: 2px;
+    margin-bottom:12px;
+    cursor: pointer;
+}
+#logincontent .content-body .dom .btn:hover{
+    width: 100%;
+    height:42px;
+	line-height:42px;
+    border: none;
+    color: #fff;
+    background-color: rgba(240,149,17,.85);
+	border:1px solid #rgba(210,124,0,.85);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#logincontent .content-body .dom-footer .login-another{
+    /*background-color: red;*/
+    color: #666666;
+    margin-bottom: 2rem;
+	font-size:14px;
+}
+
+#logincontent .content-body .dom-footer .login-another span{
+    margin: 0 5px;
+}
+
+
+#logincontent .content-body .dom  .msg-code input{
+    width:110px;
+}
+
+
+#logincontent .content-body .dom  .msg-code input:last-child{
+    color: #666666;
+    cursor: pointer;
+    width: 74px;
+
+}
+.leftlabel{
+	padding-top: 14px;
+    margin-bottom: 0;
+    text-align: right;
+	width:60px;
+	float:left;
+	margin-right:12px;
+	font-size:14px;
+	line-height:16px;
+}
+.rightinput{
+	float: left;
+	width:190px;
+
+}
+.clear{
+	clear:both;
+}

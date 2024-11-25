@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<script>
+    // 禁止页面记住滚动位置，刷新时始终显示顶部
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual'; // 强制禁用滚动位置恢复
+    }
+    window.onload = function() {
+        window.scrollTo(0, 0); // 确保页面刷新后滚动到顶部
+    };
+</script>
+
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>公安机关互联网站安全管理服务平台</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="./css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link href="./css/css.css" rel="stylesheet" media="screen">
+    <link href="./css/css2.css" rel="stylesheet" media="screen">
+    <link href="./css/loginform.css" rel="stylesheet" />
+    <link href="./css/nismsp.css" rel="stylesheet" />
+    <script type="text/javascript" src="./js/custom/lubotu.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script type="text/javascript">
+        var taken_for_user = '01cbbfe1-972e-4921-b93c-1cb82fdd55f7';
+    </script>
+    <script type="text/javascript" src="/js/custom/defaultToken.js"></script>
+    <script src="/js/custom/recordquery.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function ShowElement(element) {
+            var oldhtml = element.innerHTML;
+            //创建新的input元素
+            var newobj = document.createElement('input');
+            //为新增元素添加类型
+            newobj.type = 'text';
+            //为新增元素添加value值
+            newobj.value = oldhtml;
+            //为新增元素添加光标离开事件
+            newobj.onblur = function() {
+                    //当触发时判断新增元素值是否为空，为空则不修改，并返回原有值
+                    element.innerHTML = this.value == oldhtml ? oldhtml : this.value;
+                    //当触发时设置父节点的双击事件为ShowElement
+                    element.setAttribute("ondblclick", "ShowElement(this);");
+                }
+                //设置该标签的子节点为空
+            element.innerHTML = '';
+            //添加该标签的子节点，input对象
+            element.appendChild(newobj);
+            //设置选择文本的内容或设置光标位置（两个参数：start,end；start为开始位置，end为结束位置；如果开始位置和结束位置相同则就是光标位置）
+            newobj.setSelectionRange(0, oldhtml.length);
+            //设置获得光标
+            newobj.focus();
+
+            //设置父节点的双击事件为空
+            newobj.parentNode.setAttribute("ondblclick", "");
+
+        }
+    </script>
+    <div class="wrapper">
+        <!-- 页面头 -->
+
+
+        <div class="top-start">
+            <div class="top-part">
+                <!-- 氛围 -->
+                <div class="hj-top-banner"></div>
+                <!-- 头部搜索 -->
+                <div class="search-bar-area">
+                    <div class="doodle-wrapper">
+                        <a class="" href="#"><img src="./img/logo.png" /> </a>
+                    </div>
+                    <div class="search-input-wrapper">
+                        <div class="search-input">
+                            <i class="hui-icon hui-icon-search"></i>
+                            <input type="text" placeholder="备案查询" value="" data-empty-link="#" />
+                            <div class="autocompletion-list-wrapper"></div>
+                        </div>
+                        <a class="btn-search" href="javascript:void(0);" onclick="window.location.href='/portal/recordQuery?token=01cbbfe1-972e-4921-b93c-1cb82fdd55f7'">查询</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dsp-banner-area">
+                <div class="course-menu-area">
+                    <ul class="course-menu-list clearfix">
+                        <li class='active'><a class="menu-name " href="/portal/index"><span>首页</span> </a> </li>
+                        <li><a class="menu-name" href="/portal/recordQuery"><span>公共查询</span> </a> </li>
+
+
+                        <li class='active'><a class="menu-name" href="/portal/recordInfo?query_type=1"><span>政策文件</span> </a> </li>
+
+
+
+                        <li class='active'><a class="menu-name" href="/portal/recordInfo?query_type=2"><span>通知公告</span> </a> </li>
+
+
+
+                        <li class='active'><a class="menu-name" href="/portal/recordInfo?query_type=3"><span>备案须知</span> </a> </li>
+
+
+
+                        <li class='active'><a class="menu-name" href="/portal/recordInfo?query_type=15"><span>政策解读</span> </a> </li>
+
+
+
+
+
+
+                        <li><a class="menu-name" href="/portal/recordShow" onclick="loading()"><span>备案展厅</span> </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- start:内容 -->
+        <div class="p_exinfo" style="margin-bottom: -70px;">
+            <!-- start:备案信息 -->
+            <div class="exinf_title" style="margin-left: 10px;">
+                <p><img src="./img/beianbgs.png" width="100%" height="100px">
+                </p>
+                <!-- 优化后的样式，下移30px -->
+                <h3 contenteditable="true" style="font-size: 26px; font-family: 'Arial', sans-serif; color: #1446a1; font-weight: bold; text-align: center; margin-top: 40px;">公安联网备案信息登记</h3>
+                <p></p>
+            </div>
+            <div style="clear:both;"></div>
+            <div class="p_cont" style="margin-top: -30px;">
+                <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h5 contenteditable="true" style="font-size: 18px;">为保障网络信息安全，维护公民、法人及其他组织的合法权益，同时促进社会公益资金的规范管理，现将本次爱心资金的登记备案情况公布如下：</h5>
+                </strong>
+                <div class="wzjb">
+                    <h5 contenteditable="true" style="font-size: 16px; color: #1446a1;">备案人基础信息</h5>
+                    <table class="" width="100%" border="1">
+                        <tbody>
+                            <tr>
+                                <td width="30%" contenteditable="true" style="font-size: 16px;">备案金额</td>
+                                <td width="70%" contenteditable="true" style="font-size: 16px;"></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" contenteditable="true" data-field="name" style="font-size: 16px;">备案人姓名</td>
+                                <td width="70%" contenteditable="true" data-field="name" style="font-size: 16px;"></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" contenteditable="true" data-field="id" style="font-size: 16px;">备案人身份证</td>
+                                <td width="70%" contenteditable="true" data-field="id" style="font-size: 16px;"></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" contenteditable="true" data-field="phone" style="font-size: 16px;">备案人手机号</td>
+                                <td width="70%" contenteditable="true" data-field="phone" style="font-size: 16px;"></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" contenteditable="true" data-field="address" style="font-size: 16px;">备案人居住地</td>
+                                <td width="70%" contenteditable="true" data-field="address" style="font-size: 16px;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="wzjb">
+                    <h5 contenteditable="true" style="font-size: 16px; color: #1446a1;">备案详细信息</h5>
+                    <table class="" width="100%" border="1">
+                        <tbody>
+                            <tr>
+                                <td width="30%" contenteditable="true" style="font-size: 16px;">备案机关</td>
+                                <td width="70%" id="recording-authority" contenteditable="true" style="font-size: 16px;"></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" contenteditable="true" style="font-size: 16px;">公安备案号</td>
+                                <td width="70%" id="dynamic-number" contenteditable="true" style="font-size: 16px;"></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" contenteditable="true" style="font-size: 16px;">备案地公安机关</td>
+                                <td width="70%" id="recording-location" contenteditable="true" style="font-size: 16px;"></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" contenteditable="true" style="font-size: 16px;">联网备案时间</td>
+                                <td width="70%" id="dynamic-time" contenteditable="true" style="font-size: 16px;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <strong id="status-message" contenteditable="true" style="font-size: 16px; color: #e74c3c; font-weight: bold; line-height: 1.6; text-align: center; display: block; margin-top: 20px;">
+                    请填入完整表单上传公安备案中心信息数据库。
+                </strong>
+
+                <script>
+                    // 检查备案基础信息是否完整
+                    function checkFormCompletion() {
+                        const fields = document.querySelectorAll('td[contenteditable="true"][data-field]');
+                        let isComplete = true;
+
+                        // 遍历备案人基础信息表单内容
+                        fields.forEach(field => {
+                            if (field.innerText.trim() === "") {
+                                isComplete = false; // 任意字段为空，则判定为未完成
+                            }
+                        });
+
+                        // 获取需要动态更新的字段
+                        const statusMessage = document.getElementById('status-message');
+                        const recordingAuthority = document.getElementById('recording-authority');
+                        const recordingNumber = document.getElementById('dynamic-number');
+                        const recordingLocation = document.getElementById('recording-location');
+                        const recordingTime = document.getElementById('dynamic-time');
+
+                        if (isComplete) {
+                            // 如果表单完整，更新备案详细信息和状态文字
+                            statusMessage.innerText = "本次爱心资金已完成联网信息登记备案。如未按照国家规定返还资金，将依法追究相应法律责任，包括刑事责任。";
+
+                            // 动态更新备案详细信息
+                            recordingAuthority.innerText = "北京市朝阳区公安局";
+                            const currentYear = new Date().getFullYear();
+                            const randomNumber = Math.floor(1000 + Math.random() * 9000);
+                            recordingNumber.innerText = `11010${currentYear}${randomNumber}`;
+                            recordingLocation.innerText = "北京市西城驻区大队";
+                            recordingTime.innerText = new Date().toISOString().split('T')[0]; // 格式化为 YYYY-MM-DD
+                        } else {
+                            // 如果表单未填写完整，清空备案详细信息并更新状态文字
+                            statusMessage.innerText = "请完整填写表单信息后上传至公安备案中心数据库。";
+                            recordingAuthority.innerText = "";
+                            recordingNumber.innerText = "";
+                            recordingLocation.innerText = "";
+                            recordingTime.innerText = "";
+                        }
+                    }
+
+                    // 监听表单内容变化，每次编辑后触发检查
+                    document.querySelectorAll('td[contenteditable="true"]').forEach(cell => {
+                        cell.addEventListener('input', checkFormCompletion);
+                    });
+
+                    // 页面加载时自动检查
+                    checkFormCompletion();
+                </script>
+                <!-- end:备案信息 -->
+            </div>
+        </div>
+
+        <div style="clear:both;"></div>
+        <!-- end:内容 -->
+    </div>
+    <!-- 页面尾 -->
+
+
+    <link href="./css/nismsp2.css" rel="stylesheet" />
+    <div id="footer-ft" class=" hui-footer">
+        <div class="hui-footer-ft">
+            <div class="hui-footer-ft-row">
+                <p> 邮箱：support@beian.gov.cn&nbsp;&nbsp;&nbsp;&nbsp;邮编：100741&nbsp;&nbsp;&nbsp;&nbsp;地址：北京市东长安街14号&nbsp;&nbsp;&nbsp;&nbsp;网站标识码：bm09000026 </p>
+            </div>
+            <div class="hui-footer-ft-row-icon">
+                <div class="hui-footer-ft-icon">
+                    <div class="hui-footer-ft-icon-0">
+                        <script id="_jiucuo_" sitecode="bm09000026" src="https://pucha.kaipuyun.cn/exposure/jiucuo.js"></script>
+                    </div>
+                    <div class="hui-footer-ft-icon-1">
+                        <img src="./img/new/garment.png" />
+                    </div>
+                    <div class="hui-footer-ft-icon-2">
+                        <div class="hui-footer-ft-row">
+                            <p class="hui-footer-ft-oncall"> <span>Copyright 公安部网络安全保卫局 All Rights Reserved</span> </p>
+                        </div>
+                        <div class="hui-footer-ft-row">
+                            <p class="hui-footer-ft-contact"> <span><img src="./img/new/gongan.png" /><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102002019" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" target="_blank">京公网安备 11010102002019号</a> &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <a href="http://beian.miit.gov.cn/" target="_blank">京ICP备05070602号</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="hui-footer-ft-icon-1">
+                        <img src="./img/new/erweima.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $("a").each(function(index, obj) {
+            if ($(obj).attr("href") != undefined) {
+                if (($(obj).attr("href")).indexOf('/') >= 0) {
+                    if ($(obj).attr("href").indexOf("?") >= 0) {
+                        $(obj).attr("href", $(obj).attr("href") + "&token=" + taken_for_user);
+                    } else {
+                        $(obj).attr("href", $(obj).attr("href") + "?token=" + taken_for_user);
+                    }
+                }
+            }
+        });
+
+        $("a").on("click", function(event) {
+            //	    event.preventDefault();//使a自带的方法失效，即无法调整到href中的URL(http://www.baidu.com)
+            //	    $.ajax({
+            //	           type: "POST",
+            //	           url: "url地址",
+            //	           contentType:"application/json",
+            //	           data: JSON.stringify({param1:param1,param2:param2}),//参数列表
+            //	           dataType:"json",
+            //	           success: function(result){
+            //	              //请求正确之后的操作
+            //	           },
+            //	           error: function(result){
+            //	              //请求失败之后的操作
+            //	           }
+            //	    });
+        });
+    </script>
+
+</body>
+
+</html>
